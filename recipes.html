@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GreenBite — Recipes</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="calculator.html">Calculator</a>
+  </nav>
+</header>
+
+<div style="text-align:right;font-size:1.1em;margin-bottom:8px;">
+  <span id="clock"></span>
+</div>
+
+<main>
+  <h2 style="font-size:2.5em;color:#0a680d;margin-bottom:0.5em;letter-spacing:1px;text-align:center;">Healthy Recipes</h2>
+  
+  <div style="display:flex;justify-content:center;align-items:center;gap:40px;margin-bottom:24px;flex-wrap:wrap;">
+    <img src="assets/vegan-icon.png" alt="Vegetarian" style="width:80px;">
+    <img src="assets/fat.png" alt="Meat" style="width:80px;border-radius:16px;box-shadow:0 2px 12px #0a680d22;">
+    <img src="assets/sm.png" alt="Smoothie" style="width:80px;border-radius:16px;box-shadow:0 2px 12px #0a680d22;">
+    <img src="assets/carbs.png" alt="Vegan" style="width:80px;">
+  </div>
+
+  <input id="search" placeholder="Search by name" style="font-size:1.3em;padding:10px 16px;margin-bottom:8px;">
+  <select id="filter" style="font-size:1.2em;padding:8px 12px;">
+    <option value="">All</option>
+    <option>Vegetarian</option>
+    <option>Meat</option>
+    <option>Vegan</option>
+  </select>
+  <button id="clear" style="font-size:1.1em;padding:8px 16px;">Clear</button>
+
+  <div id="recipes" style="font-size:1.25em;"></div>
+</main>
+
+<div id="modal" class="hidden" onclick="if(event.target.id==='modal') modal.classList.add('hidden')">
+  <div id="modal-inner"></div>
+</div>
+
+<!-- 🔗 External JavaScript -->
+<script src="recipes.js"></script>
+</body>
+</html> separet css and html to update my website  

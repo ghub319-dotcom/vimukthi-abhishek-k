@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GreenBite — Workouts</title>
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="container nav">
+  <div class="brand"><div class="logo">GB</div></div>
+  <nav>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="workouts.html">Workouts</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <!-- Live clock -->
+  <div style="text-align:right;font-size:1.1em;margin-bottom:8px;">
+    <span id="clock"></span>
+  </div>
+
+  <h2>Workout Generator</h2>
+  <div class="card" style="max-width:700px">
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+      <select id="bodypart">
+        <option value="full">Full Body</option>
+        <option value="arms">Arms</option>
+        <option value="legs">Legs</option>
+      </select>
+      <select id="equipment">
+        <option value="none">None</option>
+        <option value="dumbbells">Dumbbells</option>
+        <option value="kettlebells">Kettlebells</option>
+      </select>
+      <button class="btn" id="gen">Generate</button>
+    </div>
+
+    <!-- Generated workout plan -->
+    <div id="plan" style="margin-top:.8rem"></div>
+
+    <!-- Workout photo -->
+    <h3 style="margin-top:1.5rem">Workout Session</h3>
+    <div style="margin-top:.5rem;text-align:center">
+      <img src="assets/wk.jpg" alt="Workout Session"
+           style="max-width:100%;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2)">
+    </div>
+  </div>
+</main>
+
+<!-- Scripts -->
+<script src="scripts/common.js"></script>
+<script src="workouts.js"></script>
+</body>
+</html>

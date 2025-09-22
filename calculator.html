@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GreenBite — Calculator</title>
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="container nav">
+  <div class="brand"><div class="logo">GB</div></div>
+  <nav>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <div style="text-align:right;font-size:1.1em;margin-bottom:8px;">
+    <span id="clock"></span>
+  </div>
+
+  <h2 style="text-align:center;font-size:2.2em;color:#0a680d;margin-bottom:0.5em;letter-spacing:1px;">
+    Calorie & Nutrition Calculator
+  </h2>
+
+  <!-- Macro icons -->
+  <div style="display:flex;justify-content:center;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:32px;">
+    <div style="background:linear-gradient(135deg,#e6ffe6 60%,#90ee90 100%);border-radius:18px;box-shadow:0 4px 16px #0a680d22;padding:16px 24px;display:flex;flex-direction:column;align-items:center;">
+      <img src="assets/meat-icon.png" alt="Protein" style="width:70px;border-radius:50%;box-shadow:0 2px 8px #0a680d22;margin-bottom:8px;">
+      <span style="font-weight:bold;color:#0a680d;">Protein</span>
+    </div>
+    <div style="background:linear-gradient(135deg,#fffbe6 60%,#ffe090 100%);border-radius:18px;box-shadow:0 4px 16px #0a680d22;padding:16px 24px;display:flex;flex-direction:column;align-items:center;">
+      <img src="assets/carbs.png" alt="Carbs" style="width:70px;border-radius:50%;box-shadow:0 2px 8px #0a680d22;margin-bottom:8px;">
+      <span style="font-weight:bold;color:#e6a800;">Carbs</span>
+    </div>
+    <div style="background:linear-gradient(135deg,#e6f7ff 60%,#90d0ee 100%);border-radius:18px;box-shadow:0 4px 16px #0a680d22;padding:16px 24px;display:flex;flex-direction:column;align-items:center;">
+      <img src="assets/fat.png" alt="Fat" style="width:70px;border-radius:50%;box-shadow:0 2px 8px #0a680d22;margin-bottom:8px;">
+      <span style="font-weight:bold;color:#0a68a0;">Fat</span>
+    </div>
+  </div>
+
+  <!-- Calculator form -->
+  <form id="calc-form" class="card" style="display:grid;gap:.6rem;max-width:600px">
+    <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+      <input placeholder="Age (years)" id="age" type="number">
+      <select id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <input placeholder="Height (cm)" id="height" type="number">
+      <input placeholder="Weight (kg)" id="weight" type="number">
+    </div>
+    <select id="activity">
+      <option value="1.2">Sedentary (little or no exercise)</option>
+      <option value="1.375">Lightly active</option>
+      <option value="1.55">Moderately active</option>
+      <option value="1.725">Very active</option>
+      <option value="1.9">Super active</option>
+    </select>
+    <div style="display:flex;gap:.5rem">
+      <button class="btn" type="button" id="calc-btn">Calculate</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+  <!-- Results + fact bar -->
+  <div id="results" class="card hidden" style="margin-top:1rem"></div>
+  <div id="fact-bar" class="card hidden" style="margin-top:1rem;background:#e6ffe6;color:#0a680d;font-weight:bold;text-align:center;"></div>
+</main>
+
+<!-- Scripts -->
+<script src="scripts/common.js"></script>
+<script src="calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mindfulness</title>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="mindfulness.css">
+</head>
+<body>
+
+<nav>
+  <div class="brand">GreenBite🍃</div>
+  <a href="index.html">Home🏠</a>
+</nav>
+
+<div class="clock-container">
+  <span id="clock"></span>
+</div>
+
+<main>
+  <h1>Mindfulness</h1>
+
+  <div class="card">
+    <h2>Guided Breathing Cycle</h2>
+    <p>Follow the inhale, hold, and exhale cycle below. The circle will expand and contract to guide your breathing.</p>
+    
+    <div id="breath" class="breath">Breathe</div>
+    
+    <div class="breath-pointer"></div>
+    
+    <p id="breathText"></p>
+    
+    <div id="cycleCount">Cycle: 0</div>
+
+    <div class="breath-legend">
+      <span class="inhale"></span> Inhale
+      <span class="exhale"></span> Exhale
+    </div>
+
+    <button onclick="startBreathing()">Start Breath🌬</button>
+    <button onclick="stopBreathing()">Stop</button>
+
+    <hr>
+
+    <h3>Timer</h3>
+    <input id="minInput" type="number" value="1" min="1"> min
+    <button onclick="startTimer()">Start Session</button>
+    <p id="sessionMsg"></p>
+    <button id="soundToggle" onclick="toggleSound()">Toggle Ambient</button>
+  </div>
+</main>
+
+<!-- External JavaScript -->
+<script src="mindfulness.js"></script>
+</body>
+</html>

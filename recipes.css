@@ -1,0 +1,42 @@
+/* Recipes Page Specific Styles */
+main {
+  font-size: 1.25em;
+}
+h2 {
+  font-size: 1.9em;
+  color: #0a680d;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.recipe-images-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.recipe-images-row img {
+  width: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #0a680d22;
+}
+input#search, select#filter, button#clear {
+  font-size: 1.3em;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+}
+#recipes {
+  font-size: 1.25em;
+}
+.card {
+  background: #f6fff6;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #0a680d22;
+  padding: 24px 18px;
+  margin: 0 auto 18px auto;
+  max-width: 600px;
+}
+
+
